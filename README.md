@@ -108,7 +108,7 @@ Returns a response with all the finished games.
 ```http
   GET localhost:8000/api/get_active_games/
 ```
-Returns a response with all the active game. 
+Returns a response with all the active game.
 
 #### Delete a game
 
@@ -116,7 +116,7 @@ Returns a response with all the active game.
   DELETE localhost:8000/api/delete_game/{id}
 ```
 Delete the game by id.
-  
+
 
 #### Retrive a game
 
@@ -183,7 +183,7 @@ Update the state of the game:
 **Others:**
 - Docker Compose
 
-  
+
 ## Author
 
 - [@FacundoVega](https://github.com/facuvegaa)

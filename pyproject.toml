@@ -1,0 +1,57 @@
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+known_first_party = [
+    "migrations",
+]
+known_third_party = ["migrations"]
+default_section="THIRDPARTY"
+
+[tool.ruff]
+
+exclude = [
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    "env",
+    ".venv",
+    "migrations",
+]
+
+line-length = 88
+
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "C",   # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "D",   # pydocstyle
+    "T",   # flake8-debugger, flake8-print
+    "N",   # pep8-naming
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+    "ERA", # eradicate
+]
+
+ignore = [
+    "D106", # Missing docstring in public nested class
+    "N805", # first argument of a method should be named 'self' (ignored due to pydantic validators using 'cls')
+    "C901", # function is too complex
+    "E501", # line too long (ignored in favor of B950)
+    "B905", # zip() without an explicit strict= parameter. Enable this when moving to Python 3.10
+    "D212",
+    # Below are ignores used to enable Google style docstrings
+    # https://github.com/charliermarsh/ruff#does-ruff-support-numpy--or-google-style-docstrings
+    "D203",
+    "D204",
+    "D213",
+    "D215",
+    "D400",
+    "D404",
+    "D406",
+    "D407",
+    "D408",
+    "D409",
+    "D413",
+]

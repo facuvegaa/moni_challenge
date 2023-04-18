@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-{% load static %}  
+{% load static %}
 <link rel="stylesheet" href="{% static 'css/pedido.css' %}">
 
 <head>
@@ -35,8 +35,8 @@
         <input type="number" name="monto_solicitado" min="1"  max="1000000000" required><br>
 
         <input type="submit" value="Enviar">
-        
-        <a href={% url "prestamos" %}><input type="button" value="Administrar Prestamos"></a> 
+
+        <a href={% url "prestamos" %}><input type="button" value="Administrar Prestamos"></a>
     </form>
     </body>
 </html>

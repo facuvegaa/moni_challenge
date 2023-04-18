@@ -1,6 +1,10 @@
+"""Loan requets App."""
+
 from django.apps import AppConfig
 
 
 class LoanRequestConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'loan_request'
+    """Loan request config app."""
+
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "loan_request"
