@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}  
+  <link rel="stylesheet" href="{% static 'css/admin_login.css' %}">
+    <h1>Admin Login</h1>
+    {% if error_message %}
+      <p>{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+    <a href={%url "solicitar_prestamo" %}>Regresar</a>
+</html>

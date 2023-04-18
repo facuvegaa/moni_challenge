@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+{% load static %}  
+<link rel="stylesheet" href="{% static 'css/eliminar_solicitud.css' %}">
+<head>
+    <title>Eliminar Solicitud de Prestamo</title>
+</head>
+<body>
+    <h1>Esta seguro que desea eliminar la solicitud de prestamo de: {{item}}</h1>
+    <form action= {% url "eliminar_solicitud" item.id %} method='POST'>
+        {%csrf_token%}
+        <input type='submit' value='Confirmar'/>
+        <a href= {% url "prestamos" %}>
+            <input type="button" value="Cancelar"/>
+        </a>
+    </form>
+</body>
+</html>

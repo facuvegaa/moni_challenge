@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+{% load static %}  
+<link rel="stylesheet" href="{% static 'css/prestamos_solicitados.css' %}">
+<h1>Solicitudes de préstamo</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>DNI</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Género</th>
+      <th>Email</th>
+      <th>Monto solicitado</th>
+      <th>Aprobado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for loan_request in loan_requests %}
+    <tr>
+      <td>{{ loan_request.id }}</td>
+      <td>{{ loan_request.dni }}</td>
+      <td>{{ loan_request.nombre }}</td>
+      <td>{{ loan_request.apellido }}</td>
+      <td>{{ loan_request.genero }}</td>
+      <td>{{ loan_request.email }}</td>
+      <td>{{ loan_request.monto_solicitado }}</td>
+      <td>{% if loan_request.aprobado %}Sí{% else %}No{% endif %}</td>
+      <td>
+        <a href={%url "editar_solicitud" loan_request.id %}>Editar</a>
+        <a href={% url "eliminar_solicitud" loan_request.id %}>Eliminar</a>
+      </td>
+    </tr>
+    {% endfor %}
+    <a href={%url "solicitar_prestamo"  %}>Solicitar un nuevo prestamo.</a>
+    </tbody>
+</table>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% load static %}  
+<link rel="stylesheet" href="{% static 'css/pedido.css' %}">
+<head>
+    <title>Resultado de préstamo</title>
+</head>
+<body>
+    {% if aprobado %}
+        <h1>Felicitaciones, su préstamo ha sido aprobado</h1>
+    {% else %}
+        <h1>Lo sentimos, su préstamo ha sido denegado</h1>
+    {% endif %}
+    <td>
+        <a href={%url "solicitar_prestamo"  %}>Solicitar un nuevo prestamo.</a>
+        <a href={% url "prestamos" %}>Administrar prestamos.</a>
+    </td>
+</body>
+</html>
