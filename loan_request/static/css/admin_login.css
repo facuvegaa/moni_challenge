@@ -19,7 +19,8 @@ form {
     margin-bottom: 15px;
   }
 
-  input[type="submit"] {
+  input[type="submit"],
+  input[type="button"] {
     background-color: #007bff;
     color: #fff;
     padding: 8px 20px;
@@ -29,7 +30,8 @@ form {
     transition: background-color 0.2s ease-in-out;
   }
 
-  input[type="submit"]:hover {
+  input[type="submit"],
+  input[type="button"]:hover {
     background-color: #0062cc;
   }
 
